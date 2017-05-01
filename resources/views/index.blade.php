@@ -1,26 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    @foreach($events as $event)
-        <?php
-            $type = gettype($event["description"]);
-            if ($type == "string") {
-        ?>
+
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+    @foreach($events as $event)
+            <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading"> <a href="/event/{{$event["@attributes"]["id"]}}">{{$event["title"]}}</a></div>
 
-                    <div class="panel-body">
+                    <div class="panel-body more ">
+                        <img src="{{$event["image"]["large"]["url"]}}" alt="">
                         {{$event["description"]}}
                     </div>
                 </div>
             </div>
-        </div>
+            @endforeach
     </div>
-        <?php
-        }
-        ?>
-    @endforeach
+    </div>
+
+
+
 @endsection

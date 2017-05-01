@@ -13,14 +13,24 @@ class EventsManagerController extends Controller
             'timeout' => 20.0,
         ]);
 
-        $response = $client->request('GET','events/search?app_key=rCR5P3ZZGndrHvpR&keywords=sevilla&image_sizes=blackborder250,large');
+        $coordClient = new Client([
+            'base_uri' => 'http://ip-api.com/json/',
+            'timeout' => 20.0
+        ]);
+        $ip = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com"));
+        $coords = $coordClient->request('GET', "$ip");
+    //print_r($coords->getBody()->getContents());
+        $coordsJson = json_decode($coords->getBody()->getContents());
+        //print_r($coordsJson);
+        $response = $client->request('GET','events/search?app_key=rCR5P3ZZGndrHvpR&location='.$coordsJson->lat.','.$coordsJson->lon.'&within=20&image_sizes=blackborder250,large&include=description&page_size=9');
 
         $xml = new \SimpleXMLElement($response->getBody()->getContents());
 
         $json = json_encode($xml,JSON_FORCE_OBJECT);
         $elements = json_decode($json, true);
         //print_r($elements["events"]["event"][0]["@attributes"]["id"]);
-        return view("index")->with("events", $elements["events"]["event"]);
+        //return view("index")->with("events", $elements["events"]["event"]);
+        print_r($elements);
     }
     public function event($id){
         $client = new Client([
@@ -28,7 +38,7 @@ class EventsManagerController extends Controller
             'timeout' => 20.0,
         ]);
         // TODO: Add location
-        $response = $client->request('GET','events/get?app_key=rCR5P3ZZGndrHvpR&image_sizes=large&id='.$id);
+        $response = $client->request( 'GET','events/get?app_key=rCR5P3ZZGndrHvpR&image_sizes=large&id='.$id);
 
         $xml = new \SimpleXMLElement($response->getBody()->getContents());
 
@@ -37,4 +47,5 @@ class EventsManagerController extends Controller
         //print_r($elements["events"]["event"][0]["@attributes"]["id"]);
         return view('event')->with('event', $elements);
     }
+
 }

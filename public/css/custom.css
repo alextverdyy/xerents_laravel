@@ -1,0 +1,12 @@
+.morecontent span {
+    display: none;
+}
+.morelink {
+    display: block;
+}
+
+
+.panel-heading {
+    max-height: 32px;
+    overflow: hidden;
+}
