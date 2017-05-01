@@ -14,6 +14,7 @@
                             @else
                                 <span class="label label-info">No tiene categorias</span>
                             @endif
+
                         </div>
 
                             <div class="panel-body">
@@ -45,8 +46,3 @@
 
 @endsection
 
-@if(is_string($category["name"]))
-    <span class="label label-info">{{$category["name"]}}</span>
-@else
-    <span class="label label-info">No tiene categorias</span>
-@endif
