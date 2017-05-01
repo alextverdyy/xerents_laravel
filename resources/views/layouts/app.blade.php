@@ -52,6 +52,7 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Conectarse</a></li>
+                            <li><a href="{{ route('login') }}">Conectarse</a></li>
                             <li><a href="{{ route('register') }}">Registrarse</a></li>
                         @else
                             <li class="dropdown">
