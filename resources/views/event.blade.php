@@ -22,7 +22,7 @@
                                 <strong>Lugar del evento:</strong> {{$event["venue_name"]}}<br>
                                 <strong>Ciudad:</strong> {{$event["city"]}},{{$event["country"]}}<br>
                                 <strong>Mapa:</strong><br>
-                                <img src="https://maps.googleapis.com/maps/api/staticmap?center={{$event["latitude"]}},{{$event["longitude"]}}&zoom=12&size=400x400&markers=color:blue%icon:%7Clabel:S%7C{{$event["latitude"]}},{{$event["longitude"]}}&key=AIzaSyA8pwDDJb4qzanENfLX9Xx5S0dn6YP8ino" alt="mapa"><br>
+                                <img width="400px" src="https://maps.googleapis.com/maps/api/staticmap?center={{$event["latitude"]}},{{$event["longitude"]}}&zoom=12&size=400x400&zoom=22&markers=color:blue%icon:%7Clabel:%7C{{$event["latitude"]}},{{$event["longitude"]}}&key=AIzaSyA8pwDDJb4qzanENfLX9Xx5S0dn6YP8ino" alt="mapa"><br>
                             </div>
 
                             <div class="panel-body">
