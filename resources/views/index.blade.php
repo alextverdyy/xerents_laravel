@@ -3,8 +3,14 @@
 @section('content')
 
     <div class="container">
-        <div class="row">
+    <?php $number = 1;  ?>
     @foreach($events as $event)
+            <?php
+                if ($number % 3 == 0) {
+                   ?><div class="row"><?php
+                }
+            ?>
+
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading"> <a href="/event/{{$event["@attributes"]["id"]}}">{{$event["title"]}}</a></div>
@@ -22,8 +28,14 @@
                     </div>
                 </div>
             </div>
+                    <?php
+                    if ($number % 3 == 0) {
+                    ?></div><?php
+                        }
+                        ?>
+            <?php $number++ ?>
             @endforeach
-    </div>
+
     </div>
 
 
