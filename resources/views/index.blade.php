@@ -10,8 +10,15 @@
                     <div class="panel-heading"> <a href="/event/{{$event["@attributes"]["id"]}}">{{$event["title"]}}</a></div>
 
                     <div class="panel-body more ">
-                        <img src="{{$event["image"]["large"]["url"]}}" alt="">
-                        {{$event["description"]}}
+
+                        <?php
+                        if (is_string($event["description"])){
+                            echo $event["description"];
+                        }else{
+                            echo "NO CONTIENE DESCRIPCION";
+                        }
+                        ?>
+
                     </div>
                 </div>
             </div>
