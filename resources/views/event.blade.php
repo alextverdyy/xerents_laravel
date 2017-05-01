@@ -16,7 +16,7 @@
 
                             <div class="panel-body">
                                 OTROS DETALLES<br>
-                                <br>
+                                <br> s
                                 Descripcion: {{$event["description"]}}<br>
                                 <a href="{{$event["url"]}}">Para mas informacion</a><br>
                             </div>
