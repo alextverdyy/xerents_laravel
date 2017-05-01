@@ -35,6 +35,6 @@ class EventsManagerController extends Controller
         $json = json_encode($xml,JSON_FORCE_OBJECT);
         $elements = json_decode($json, true);
         //print_r($elements["events"]["event"][0]["@attributes"]["id"]);
-        print_r($elements);
+        return view('event')->with('event', $elements);
     }
 }
