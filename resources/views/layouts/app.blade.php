@@ -14,6 +14,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -81,6 +82,7 @@
         </nav>
 
         @yield('content')
+        @yield('footer')
     </div>
 
     <!-- Scripts -->

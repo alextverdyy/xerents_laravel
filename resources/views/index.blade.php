@@ -26,7 +26,7 @@
 
                         <?php
                         if (is_string($event["description"])){
-                            echo $event["description"];
+                            echo strip_tags($event["description"]);
                         }else{
                             echo "NO CONTIENE DESCRIPCION";
                         }

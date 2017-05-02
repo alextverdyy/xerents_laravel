@@ -19,6 +19,8 @@ Route::get('/filtrar', function (){
     return view("filter");
 });
 
+Route::get('/event/favorite/{id}', "EventsManagerController@favorite");
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
