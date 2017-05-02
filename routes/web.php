@@ -15,6 +15,9 @@ use GuzzleHttp\Client;
 
 Route::get('/', "EventsManagerController@index");
 Route::get('/event/{id}', "EventsManagerController@event");
+Route::get('/filtrar', function (){
+    return view("filter");
+});
 
 Route::get('/event/favorite/{id}', "EventsManagerController@favorite");
 
