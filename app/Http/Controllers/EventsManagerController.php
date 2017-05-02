@@ -47,5 +47,8 @@ class EventsManagerController extends Controller
         //print_r($elements["events"]["event"][0]["@attributes"]["id"]);
         return view('event')->with('event', $elements);
     }
+    public function favorite($id) {
+        return "Se añadio el evento ".$id." a favoritos";
+    }
 
 }

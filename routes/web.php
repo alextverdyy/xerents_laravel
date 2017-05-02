@@ -16,6 +16,8 @@ use GuzzleHttp\Client;
 Route::get('/', "EventsManagerController@index");
 Route::get('/event/{id}', "EventsManagerController@event");
 
+Route::get('/event/favorite/{id}', "EventsManagerController@favorite");
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
