@@ -1,3 +1,5 @@
+/* GENERAL STYLE */
+
 .morecontent span {
     display: none;
 }
@@ -5,8 +7,29 @@
     display: block;
 }
 
-
 .panel-heading {
     max-height: 32px;
     overflow: hidden;
 }
+
+/* END GENERAL STYLE */
+
+
+/**********************************************************************************************************************/
+
+
+/* INDEX STYLE */
+
+.imgEvent
+{
+    padding:1%;
+    margin-top:1.5%;
+}
+
+.imgHeader
+{
+    background-image: url(/img/header.jpg);
+    width: 100%;
+    min-height:190px;
+}
+/* END INDEX STYLE */
