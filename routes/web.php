@@ -21,6 +21,8 @@ Route::get('/filtrar', function (){
 
 Route::get('/event/favorite/{id}', "EventsManagerController@favorite");
 
+Route::get('favoritos',"EventsManagerController@favoriteList");
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

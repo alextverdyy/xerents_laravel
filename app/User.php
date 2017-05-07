@@ -26,4 +26,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function likes()
+    {
+        return $this->belongsToMany('App\Event', 'likes', 'user_id', 'event_id');
+    }
 }

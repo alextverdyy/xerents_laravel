@@ -18,6 +18,7 @@
                             @endif
 
                         </div>
+                        <!-- TODO: Add ajax interaction -->
                         <a href="/event/favorite/{{$event["@attributes"]["id"]}}" class="btn btn-default" onmouseover="$(this).css('color','yellow')" onmouseout="$(this).css('color','black')"><span class="glyphicon glyphicon-star"></span> Añadir a favoritos</a>
                             <div class="panel-body">
                                 <strong>Hora de inicio:</strong> {{$event["start_time"]}}<br>
