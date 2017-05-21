@@ -1,10 +1,13 @@
+@include('alert::bootstrap')
 @extends('layouts.app')
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 @section('content')
 
         <div class="container">
+            <div class="alert">
+
+            </div>
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="panel panel-default">
@@ -19,7 +22,7 @@
 
                         </div>
                         <!-- TODO: Add ajax interaction -->
-                        <a href="/event/favorite/{{$event["@attributes"]["id"]}}" class="btn btn-default" onmouseover="$(this).css('color','yellow')" onmouseout="$(this).css('color','black')"><span class="glyphicon glyphicon-star"></span> Añadir a favoritos</a>
+                        <a class="btn btn-default favorite" onmouseover="$(this).css('color','yellow')" onmouseout="$(this).css('color','black')"><span class="glyphicon glyphicon-star"></span> Añadir a favoritos</a>
                             <div class="panel-body">
                                 <strong>Hora de inicio:</strong> {{$event["start_time"]}}<br>
                                 <strong>Lugar del evento:</strong> {{$event["venue_name"]}}<br>
@@ -45,6 +48,29 @@
                 </div>
             </div>
         </div>
+        <script>
+            $(document).ready(function() {
+                $.get("/event/user/favorite/{{$event["@attributes"]["id"]}}", function (data, status) {
+                    if (data == "conectado"){
+                        $(".favorite").css('color','grey');
+                    }else if(data == "true") {
+                        $(".favorite").css('color','yellow');
+                    }
+                });
+                $(".favorite").click(function () {
+
+                    $.get("/event/favorite/{{$event["@attributes"]["id"]}}", function (data, status) {
+                        if (data == "conectado"){
+                            $('.alert').append('<div class="alert alert-warning"> El usuario no se encuentra conectado </div>');
+                        }else if(data == "correcto") {
+                            $('.alert').append('<div class="alert alert-success">¡Oferta agregada correctamente!</div>');
+                        }else{
+                            $('.alert').append('<div class="alert alert-warning">La oferta no se ha podido agregar a favoritos</div>');
+                        }
+                    });
+                });
+            });
+        </script>
 
 @endsection
 

@@ -4,8 +4,82 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a348be1a83c5de8b6036d674d823c491",
+    "content-hash": "fafcfedc47d63f7c726a83ea804d5d23",
     "packages": [
+        {
+            "name": "cartalyst/alerts",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cartalyst/alerts.git",
+                "reference": "00639a88ef11645aacd2756b654fec7b2796fa9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cartalyst/alerts/zipball/00639a88ef11645aacd2756b654fec7b2796fa9a",
+                "reference": "00639a88ef11645aacd2756b654fec7b2796fa9a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "illuminate/filesystem": "Required to send flash messages across requests. (~4.1)",
+                "illuminate/session": "Required to send flash messages across requests. (~4.1)"
+            },
+            "type": "library",
+            "extra": {
+                "component": "package",
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cartalyst\\Alerts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cartalyst LLC",
+                    "email": "help@cartalyst.com"
+                },
+                {
+                    "name": "Bruno Gaspar",
+                    "email": "bruno.gaspar@cartalyst.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Dan Syme",
+                    "email": "dan.syme@cartalyst.com",
+                    "role": "Project Lead"
+                },
+                {
+                    "name": "Suhayb Wardany",
+                    "email": "su.wardany@cartalyst.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Alerts allows you to easily pass alert messages to your views.",
+            "keywords": [
+                "alerts",
+                "cartalyst",
+                "flash",
+                "laravel",
+                "messages",
+                "php"
+            ],
+            "time": "2017-01-30T18:19:00+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -415,16 +489,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.21",
+            "version": "v5.4.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee"
+                "reference": "ad82327705658dbf5f0ce72805caa950dfbe150d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee",
-                "reference": "2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ad82327705658dbf5f0ce72805caa950dfbe150d",
+                "reference": "ad82327705658dbf5f0ce72805caa950dfbe150d",
                 "shasum": ""
             },
             "require": {
@@ -540,7 +614,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-04-28T15:40:01+00:00"
+            "time": "2017-05-11T20:10:35+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1056,16 +1130,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.3",
+            "version": "v0.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e"
+                "reference": "38a9d21406597a0440690eafbcb0222f528c8ac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/38a9d21406597a0440690eafbcb0222f528c8ac6",
+                "reference": "38a9d21406597a0440690eafbcb0222f528c8ac6",
                 "shasum": ""
             },
             "require": {
@@ -1125,7 +1199,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-03-19T21:40:44+00:00"
+            "time": "2017-05-17T06:49:19+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -1267,16 +1341,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.7",
+            "version": "v5.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4"
+                "reference": "9a06dc570a0367850280eefd3f1dc2da45aef517"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
-                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/9a06dc570a0367850280eefd3f1dc2da45aef517",
+                "reference": "9a06dc570a0367850280eefd3f1dc2da45aef517",
                 "shasum": ""
             },
             "require": {
@@ -1317,7 +1391,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2017-04-20T17:32:18+00:00"
+            "time": "2017-05-01T15:54:03+00:00"
         },
         {
             "name": "symfony/console",
@@ -2097,6 +2171,116 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2016-09-20T12:50:39+00:00"
+        },
+        {
+            "name": "uxweb/sweet-alert",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uxweb/sweet-alert.git",
+                "reference": "d32915471455061d6257448cbb8de16ecc521331"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uxweb/sweet-alert/zipball/d32915471455061d6257448cbb8de16ecc521331",
+                "reference": "d32915471455061d6257448cbb8de16ecc521331",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/session": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "UxWeb\\SweetAlert\\": "src/SweetAlert/"
+                },
+                "files": [
+                    "src/SweetAlert/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Uziel Bueno",
+                    "email": "ux.webs@gmail.com"
+                }
+            ],
+            "description": "A simple PHP package to show Sweet Alerts with the Laravel Framework",
+            "keywords": [
+                "alert",
+                "laravel",
+                "notifier",
+                "sweet"
+            ],
+            "time": "2017-03-27T03:54:49+00:00"
+        },
+        {
+            "name": "vinkla/alert",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vinkla/laravel-alert.git",
+                "reference": "3bd2aed0ed3c438b1e0ad786a2ce6e149a24bd8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vinkla/laravel-alert/zipball/3bd2aed0ed3c438b1e0ad786a2ce6e149a24bd8b",
+                "reference": "3bd2aed0ed3c438b1e0ad786a2ce6e149a24bd8b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.4.*",
+                "illuminate/session": "5.4.*",
+                "illuminate/support": "5.4.*",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "^3.3",
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vinkla\\Alert\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@vinkla.com",
+                    "homepage": "https://vinkla.com"
+                }
+            ],
+            "description": "A Bootstrap alert helper for Laravel",
+            "keywords": [
+                "alert",
+                "bootstrap",
+                "flash",
+                "laravel"
+            ],
+            "time": "2017-02-25T16:45:45+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -3114,23 +3298,23 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e"
+                "reference": "3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/13edfd8706462032c2f52b4b862974dd46b71c9e",
-                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2",
+                "reference": "3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
             },
             "type": "library",
             "extra": {
@@ -3162,7 +3346,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2015-12-08T07:14:41+00:00"
+            "time": "2017-05-18T13:44:30+00:00"
         },
         {
             "name": "sebastian/environment",

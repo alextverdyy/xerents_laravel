@@ -8,16 +8,18 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'a806c12c6e24e7e4e900847766218dba' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/functions.php',
+        'f1fc7a7a353e3515a5d5efd255977059' => __DIR__ . '/..' . '/vinkla/alert/src/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -32,6 +34,14 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
+        ),
+        'V' => 
+        array (
+            'Vinkla\\Alert\\' => 13,
+        ),
+        'U' => 
+        array (
+            'UxWeb\\SweetAlert\\' => 17,
         ),
         'T' => 
         array (
@@ -98,6 +108,7 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
         array (
             'Cron\\' => 5,
             'Conner\\Likeable\\' => 16,
+            'Cartalyst\\Alerts\\' => 17,
             'Carbon\\' => 7,
         ),
         'A' => 
@@ -120,6 +131,14 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Vinkla\\Alert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vinkla/alert/src',
+        ),
+        'UxWeb\\SweetAlert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -253,6 +272,10 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
         array (
             0 => __DIR__ . '/..' . '/rtconner/laravel-likeable/src',
         ),
+        'Cartalyst\\Alerts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cartalyst/alerts/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -328,6 +351,18 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'Cartalyst\\Alerts\\Alerts' => __DIR__ . '/..' . '/cartalyst/alerts/src/Alerts.php',
+        'Cartalyst\\Alerts\\Laravel\\AlertsServiceProvider' => __DIR__ . '/..' . '/cartalyst/alerts/src/Laravel/AlertsServiceProvider.php',
+        'Cartalyst\\Alerts\\Laravel\\Facades\\Alert' => __DIR__ . '/..' . '/cartalyst/alerts/src/Laravel/Facades/Alert.php',
+        'Cartalyst\\Alerts\\Message' => __DIR__ . '/..' . '/cartalyst/alerts/src/Message.php',
+        'Cartalyst\\Alerts\\Native\\AlertsBootstrapper' => __DIR__ . '/..' . '/cartalyst/alerts/src/Native/AlertsBootstrapper.php',
+        'Cartalyst\\Alerts\\Native\\Facades\\Alert' => __DIR__ . '/..' . '/cartalyst/alerts/src/Native/Facades/Alert.php',
+        'Cartalyst\\Alerts\\Notifiers\\FlashNotifier' => __DIR__ . '/..' . '/cartalyst/alerts/src/Notifiers/FlashNotifier.php',
+        'Cartalyst\\Alerts\\Notifiers\\Notifier' => __DIR__ . '/..' . '/cartalyst/alerts/src/Notifiers/Notifier.php',
+        'Cartalyst\\Alerts\\Notifiers\\NotifierInterface' => __DIR__ . '/..' . '/cartalyst/alerts/src/Notifiers/NotifierInterface.php',
+        'Cartalyst\\Alerts\\Storage\\IlluminateSession' => __DIR__ . '/..' . '/cartalyst/alerts/src/Storage/IlluminateSession.php',
+        'Cartalyst\\Alerts\\Storage\\NativeSession' => __DIR__ . '/..' . '/cartalyst/alerts/src/Storage/NativeSession.php',
+        'Cartalyst\\Alerts\\Storage\\StorageInterface' => __DIR__ . '/..' . '/cartalyst/alerts/src/Storage/StorageInterface.php',
         'Conner\\Likeable\\Like' => __DIR__ . '/..' . '/rtconner/laravel-likeable/src/Like.php',
         'Conner\\Likeable\\LikeCounter' => __DIR__ . '/..' . '/rtconner/laravel-likeable/src/LikeCounter.php',
         'Conner\\Likeable\\LikeableServiceProvider' => __DIR__ . '/..' . '/rtconner/laravel-likeable/src/LikeableServiceProvider.php',
@@ -2532,9 +2567,11 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
         'Psy\\CodeCleaner\\InstanceOfPass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/InstanceOfPass.php',
         'Psy\\CodeCleaner\\LeavePsyshAlonePass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/LeavePsyshAlonePass.php',
         'Psy\\CodeCleaner\\LegacyEmptyPass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/LegacyEmptyPass.php',
+        'Psy\\CodeCleaner\\LoopContextPass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/LoopContextPass.php',
         'Psy\\CodeCleaner\\MagicConstantsPass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/MagicConstantsPass.php',
         'Psy\\CodeCleaner\\NamespaceAwarePass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/NamespaceAwarePass.php',
         'Psy\\CodeCleaner\\NamespacePass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/NamespacePass.php',
+        'Psy\\CodeCleaner\\NoReturnValue' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/NoReturnValue.php',
         'Psy\\CodeCleaner\\PassableByReferencePass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/PassableByReferencePass.php',
         'Psy\\CodeCleaner\\StaticConstructorPass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/StaticConstructorPass.php',
         'Psy\\CodeCleaner\\StrictTypesPass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/StrictTypesPass.php',
@@ -2566,6 +2603,7 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
         'Psy\\Command\\PsyVersionCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/PsyVersionCommand.php',
         'Psy\\Command\\ReflectingCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/ReflectingCommand.php',
         'Psy\\Command\\ShowCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/ShowCommand.php',
+        'Psy\\Command\\SudoCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/SudoCommand.php',
         'Psy\\Command\\ThrowUpCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/ThrowUpCommand.php',
         'Psy\\Command\\TraceCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/TraceCommand.php',
         'Psy\\Command\\WhereamiCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/WhereamiCommand.php',
@@ -2591,6 +2629,10 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
         'Psy\\Formatter\\DocblockFormatter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Formatter/DocblockFormatter.php',
         'Psy\\Formatter\\Formatter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Formatter/Formatter.php',
         'Psy\\Formatter\\SignatureFormatter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Formatter/SignatureFormatter.php',
+        'Psy\\Input\\CodeArgument' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Input/CodeArgument.php',
+        'Psy\\Input\\FilterOptions' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Input/FilterOptions.php',
+        'Psy\\Input\\ShellInput' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Input/ShellInput.php',
+        'Psy\\Input\\SilentInput' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Input/SilentInput.php',
         'Psy\\Output\\OutputPager' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Output/OutputPager.php',
         'Psy\\Output\\PassthruPager' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Output/PassthruPager.php',
         'Psy\\Output\\ProcOutputPager' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Output/ProcOutputPager.php',
@@ -2605,6 +2647,8 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
         'Psy\\Reflection\\ReflectionLanguageConstruct' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Reflection/ReflectionLanguageConstruct.php',
         'Psy\\Reflection\\ReflectionLanguageConstructParameter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Reflection/ReflectionLanguageConstructParameter.php',
         'Psy\\Shell' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Shell.php',
+        'Psy\\Sudo' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Sudo.php',
+        'Psy\\Sudo\\SudoVisitor' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Sudo/SudoVisitor.php',
         'Psy\\TabCompletion\\AutoCompleter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/AutoCompleter.php',
         'Psy\\TabCompletion\\Matcher\\AbstractContextAwareMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/AbstractContextAwareMatcher.php',
         'Psy\\TabCompletion\\Matcher\\AbstractMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/AbstractMatcher.php',
@@ -3284,6 +3328,15 @@ class ComposerStaticInit7a4ff8f761658ea6b297e32ed5440004
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'UxWeb\\SweetAlert\\ConvertMessagesIntoSweatAlert' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/ConvertMessagesIntoSweatAlert.php',
+        'UxWeb\\SweetAlert\\LaravelSessionStore' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/LaravelSessionStore.php',
+        'UxWeb\\SweetAlert\\SessionStore' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/SessionStore.php',
+        'UxWeb\\SweetAlert\\SweetAlert' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/SweetAlert.php',
+        'UxWeb\\SweetAlert\\SweetAlertNotifier' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/SweetAlertNotifier.php',
+        'UxWeb\\SweetAlert\\SweetAlertServiceProvider' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/SweetAlertServiceProvider.php',
+        'Vinkla\\Alert\\Alert' => __DIR__ . '/..' . '/vinkla/alert/src/Alert.php',
+        'Vinkla\\Alert\\AlertServiceProvider' => __DIR__ . '/..' . '/vinkla/alert/src/AlertServiceProvider.php',
+        'Vinkla\\Alert\\Facades\\Alert' => __DIR__ . '/..' . '/vinkla/alert/src/Facades/Alert.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',

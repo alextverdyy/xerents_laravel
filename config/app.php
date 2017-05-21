@@ -105,7 +105,7 @@ return [
 
     'key' => env('APP_KEY'),
 
-    'cipher' => 'AES-256-CBC',
+    'cipher' => 'AES-128-CBC',
 
     /*
     |--------------------------------------------------------------------------
@@ -163,13 +163,18 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Conner\Likeable\LikeableServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 
         /*
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
 
+
+
+        Cartalyst\Alerts\Laravel\AlertsServiceProvider::class,
         /*
+         *
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
@@ -177,6 +182,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Vinkla\Alert\AlertServiceProvider::class
 
     ],
 
@@ -192,7 +199,7 @@ return [
     */
 
     'aliases' => [
-
+        'Alert' => Cartalyst\Alerts\Laravel\Facades\Alert::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,

@@ -20,6 +20,7 @@ Route::get('/filtrar', function (){
 });
 
 Route::get('/event/favorite/{id}', "EventsManagerController@favorite");
+Route::get('/event/user/favorite/{id}', "EventsManagerController@isfavorited");
 
 Route::get('favoritos',"EventsManagerController@favoriteList");
 

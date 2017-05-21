@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\DB;
 
+
+use Cartalyst\Alerts\Native\Facades\Alert;
 use App\Quotation;
 use Auth;
 
@@ -62,15 +64,16 @@ class EventsManagerController extends Controller
                     'user_id' => Auth::id()
                 );
                 $like = Like::create($arr);
+                echo "correcto";
             }else{
                 $like = Like::find($createdLike);
                 //print_r($like);
                 $like->delete();
+                echo "correcto";
             }
         }else{
-            echo "Usuario no encontrado";
+            echo "conectado";
         }
-
     }
     public function favoriteList(){
         $client = new Client([
@@ -89,6 +92,8 @@ class EventsManagerController extends Controller
             array_push($arrElements,$elements);
 
         }
+
+
         return view("favorites")->with("events",$arrElements);
         /*
         $response = $client->request( 'GET','events/get?app_key=rCR5P3ZZGndrHvpR&image_sizes=large&id='.$id);
@@ -100,6 +105,18 @@ class EventsManagerController extends Controller
         //print_r($elements["events"]["event"][0]["@attributes"]["id"]);
         return view('event')->with('event', $elements);
         */
+    }
+    public function isFavorited($id) {
+        if (!is_null(Auth::id())) {
+            $createdLike = DB::table('likes')->where('event_id','=',$id)->where('user_id','=',Auth::id())->value('id');
+            if (is_null($createdLike)) {
+                echo "true";
+            }else{
+                echo "false";
+            }
+        }else{
+            echo "conectado";
+        }
     }
 
 }

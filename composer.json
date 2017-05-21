@@ -9,7 +9,10 @@
         "guzzlehttp/guzzle": "~6.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "rtconner/laravel-likeable": "~1.2"
+        "rtconner/laravel-likeable": "~1.2",
+        "uxweb/sweet-alert": "^1.4",
+        "vinkla/alert": "^2.0",
+        "cartalyst/alerts": "2.0.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -1,0 +1,47 @@
+{
+    "name": "vinkla/alert",
+    "description": "A Bootstrap alert helper for Laravel",
+    "license": "MIT",
+    "keywords": ["laravel", "bootstrap", "alert", "flash"],
+    "authors": [
+        {
+            "name": "Vincent Klaiber",
+            "email": "hello@vinkla.com",
+            "homepage": "https://vinkla.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/contracts": "5.4.*",
+        "illuminate/session": "5.4.*",
+        "illuminate/support": "5.4.*"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "^3.3",
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vinkla\\Alert\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vinkla\\Tests\\Alert\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

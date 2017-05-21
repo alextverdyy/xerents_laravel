@@ -13,7 +13,7 @@
 
                 <div class="col-md-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading"> <a href="/event/{{$event["@attributes"]["id"]}}">{{$event["title"]}}</a></div>
+                        <div class="panel-heading"> <a href="/event/{{$event["@attributes"]["id"]}}" id="favorite">{{$event["title"]}}</a></div>
 
                         <div class="panel-body more ">
 
@@ -35,6 +35,7 @@
             ?>
             <?php $number++ ?>
         @endforeach
+
 
     </div>
 
