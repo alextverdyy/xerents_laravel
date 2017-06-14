@@ -11,7 +11,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles -->
+      <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
@@ -53,7 +53,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="/filtrar">Filtrar</a></li>
+                            <form action="getdata" method="get">
+                                <li><input type="text" id="term" name="term"></li>
+                                <li><input type="submit" id="aceptar" name="aceptar"></li>
+                            </form>
+
                             <li><a href="{{ route('login') }}">Conectarse</a></li>
                             <li><a href="{{ route('register') }}">Registrarse</a></li>
                         @else

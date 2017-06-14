@@ -26,4 +26,9 @@ Route::get('favoritos',"EventsManagerController@favoriteList");
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('autocomplete', function()
+{
+    return View::make('autocomplete');
+});
+Route::get('getdata', 'EventsManagerController@autocompletar');
+

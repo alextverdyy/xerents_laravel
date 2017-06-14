@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Input;
 use App\Like;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\DB;
-
+use Log;
 
 use Cartalyst\Alerts\Native\Facades\Alert;
 use App\Quotation;
@@ -17,12 +18,12 @@ class EventsManagerController extends Controller
     public function index(){
         $client = new Client([
             'base_uri' => 'http://api.eventful.com/rest/',
-            'timeout' => 20.0,
+            'timeout' => 60.0,
         ]);
 
         $coordClient = new Client([
             'base_uri' => 'http://ip-api.com/json/',
-            'timeout' => 20.0
+            'timeout' => 60.0
         ]);
         $ip = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com"));
         $coords = $coordClient->request('GET', "$ip");
@@ -117,6 +118,26 @@ class EventsManagerController extends Controller
         }else{
             echo "conectado";
         }
+    }
+    public function autocompletar()
+    {
+        $term = Str::lower(Input::get('term'));
+        $client = new Client([
+            'base_uri' => 'http://api.eventful.com/rest/',
+            'timeout' => 20.0,
+        ]);
+        // TODO: Add location
+        $response = $client->request( 'GET','events/search?app_key=rCR5P3ZZGndrHvpR&keywords='.$term);
+
+        $xml = new \SimpleXMLElement($response->getBody()->getContents());
+
+        $json = json_encode($xml,JSON_FORCE_OBJECT);
+        $elements = json_decode($json, true);
+
+        if ($elements["total_items"] == 0){
+            return "No se encotro nadfa";
+        }
+        return view("index")->with("events", $elements["events"]["event"]);
     }
 
 }
