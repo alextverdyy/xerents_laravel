@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-      <!-- Styles -->
+    <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
@@ -24,7 +23,7 @@
     </script>
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="page">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -53,24 +52,16 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <form action="getdata" method="get">
-                                <li><input type="text" id="term" name="term"></li>
-                                <li><input type="submit" id="aceptar" name="aceptar"></li>
-                            </form>
-
+                            <li><a href="/filtrar">Filtrar</a></li>
                             <li><a href="{{ route('login') }}">Conectarse</a></li>
                             <li><a href="{{ route('register') }}">Registrarse</a></li>
                         @else
-                            <li><a href="/filtrar">Filtrar</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="/favoritos">Favoritos</a>
-                                    </li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -137,4 +128,11 @@
     </script>
 
 </body>
+<footer>
+
+    <div class="footer">
+        Test Phrase
+    </div>
+
+</footer>
 </html>

@@ -12,6 +12,13 @@
     overflow: hidden;
 }
 
+.row
+{
+    margin-left:0px !important;
+    margin-right:0px !important;
+}
+
+
 /* END GENERAL STYLE */
 
 
@@ -20,10 +27,17 @@
 
 /* INDEX STYLE */
 
+.page
+{
+    background-color:#191919;
+}
+
 .imgEvent
 {
     padding:1%;
-    margin-top:1.5%;
+    margin-top:2%;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .imgHeader
@@ -31,5 +45,110 @@
     background-image: url(/img/header.jpg);
     width: 100%;
     min-height:190px;
+    margin-bottom:2%;
 }
 /* END INDEX STYLE */
+
+/* LOGIN STYLE*/
+
+.containerLogin
+{
+    padding-top:10%;
+    padding-bottom:10%;
+}
+
+/* END LOGIN STYLE */
+
+/* EVENT DETAIL STYLE */
+
+.map
+{
+    border: 1px solid #C0C0C0;
+    margin-left:2%;
+}
+
+.btnFavorite
+{
+    float:right;
+    margin-right:1%;
+    padding:1%;
+    BORDER: 1PX SOLID #C0C0C0;
+}
+
+.labelEventDescription
+{
+    border-bottom:1px solid #C0C0C0;
+    font-size:18px;
+}
+
+.panelEventDetailLeft
+{
+    margin-top:10%;
+    float:left;
+    width:50%;
+    text-align:center;
+}
+
+.panelEventDetailRight
+{
+    border-left: 1px solid #c0c0c0;
+    padding-left: 0%;
+    text-align:center;
+    width:50%;
+    float:right;
+}
+
+.panelEventDetailBottom
+{
+    text-align:center;
+    border-top:1px solid #C0C0C0;
+}
+/* END EVENT DETAIL STYLE */
+
+/* COLOR EVENT STYLE */
+
+.color1
+{
+    background-color:#fce4ec;
+}
+
+.color2
+{
+    background-color: #c5cae9;
+}
+
+.color3
+{
+    background-color: #bcaaa4;
+}
+
+.color4
+{
+    background-color: #a5d6a7;
+}
+
+.color5
+{
+    background-color: #fff59d;
+}
+
+.color6
+{
+    background-color:#ffab91;
+}
+
+.color7
+{
+    background-color:#90a4ae;
+}
+
+.color8
+{
+    background-color:#a1887f;
+}
+
+.color9
+{
+    background-color:#a1887f;
+}
+/* END COLOR EVENT STYLE */
