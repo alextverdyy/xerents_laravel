@@ -191,7 +191,20 @@
 
 /* END NOT FOUND STYLE */
 
+/* DASHBOARD STYLE */
 
+.titleDashboard
+{
+    border-bottom:1px solid #757575;
+}
+
+.separator
+{
+    border-bottom:1px solid #757575;
+    width:100%;
+}
+
+/* END DASHBOARD STYLE */
 
 
 /* MATERIAL DESIGN FORMS STYLE*/

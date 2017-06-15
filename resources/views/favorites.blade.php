@@ -3,15 +3,16 @@
 @section('content')
 
     <div class="container">
+        <h2 class="titleDashboard">Tus Eventos Favoritos:</h2>
+        <br /><br />
         <?php $number = 1;  ?>
         @foreach($events as $event)
             <?php
             if ($number % 3 == 0) {
-            ?><div class="row"><?php
+            ?><div class="row" style="margin-bottom:5%;"><?php
                 }
                 ?>
-
-                <div class="col-md-12">
+                <div class="col-md-12" >
                     <div class="panel panel-default">
                         <div class="panel-heading"> <a href="/event/{{$event["@attributes"]["id"]}}" id="favorite">{{$event["title"]}}</a></div>
 
@@ -35,6 +36,7 @@
             ?>
             <?php $number++ ?>
         @endforeach
+        <h2 class="titleDashboard">&nbsp;</h2>
 
 
     </div>
