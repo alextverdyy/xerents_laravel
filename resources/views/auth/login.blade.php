@@ -18,7 +18,7 @@
                                 <input id="email" type="text" class="form-control input" name="email" value="{{ old('email') }}" required autofocus>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label class="label">Correo Electronico</label>
+                                <label class="labelMaterial">Correo Electronico</label>
                                 <!--<input id="email" type="email" class="form-control input" name="email" value="{{ old('email') }}" required autofocus>-->
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -35,7 +35,7 @@
                                 <input id="password" type="password" class="form-control input" name="password" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label class="label">Contraseña</label>
+                                <label class="labelMaterial">Contraseña</label>
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>

@@ -14,6 +14,7 @@ use GuzzleHttp\Client;
 
 
 Route::get('/', "EventsManagerController@index");
+Route::get('/home', "EventsManagerController@index");
 Route::get('/event/{id}', "EventsManagerController@event");
 Route::get('/filtrar', function (){
     return view("filter");
@@ -30,5 +31,5 @@ Route::get('autocomplete', function()
 {
     return View::make('autocomplete');
 });
-Route::get('getdata', 'EventsManagerController@autocompletar');
+Route::get('buscar', 'EventsManagerController@autocompletar');
 

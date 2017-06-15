@@ -213,13 +213,12 @@
 .input:focus 		{ outline:none; }
 
 
-.label 				 {
+.labelMaterial 				 {
     color:#999;
     font-size:18px;
     font-weight:normal;
     position:absolute;
     pointer-events:none;
-    left:5px;
     top:10px;
     transition:0.2s ease all;
     -moz-transition:0.2s ease all;
@@ -284,6 +283,23 @@
 @keyframes inputHighlighter {
     from { background:#5264AE; }
     to 	{ width:0; background:transparent; }
+}
+
+@media (max-width:768px)
+{
+    .input
+    {
+        width:160px;
+
+    }
+    .group
+    {
+        margin-left:20% !important;
+    }
+    .bar
+    {
+        width:160px;
+    }
 }
 
 /* END MATERIAL DESIGN FORMS STYLE*/

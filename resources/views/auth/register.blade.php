@@ -15,7 +15,7 @@
                                 <input id="name" type="text" class="form-control input" name="name" value="{{ old('name') }}" required autofocus>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label class="label">Nombre</label>
+                                <label class="labelMaterial">Nombre</label>
                                 @if ($errors->has('name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -29,7 +29,7 @@
                                 <input id="email" type="text" class="form-control input" name="email" value="{{ old('email') }}" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label class="label">Correo Electronico</label>
+                                <label class="labelMaterial">Correo Electronico</label>
                                 @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -44,7 +44,7 @@
                                 <input id="password" type="password" class="form-control input" name="password" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label class="label">Contraseña</label>
+                                <label class="labelMaterial">Contraseña</label>
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -59,7 +59,7 @@
                                 <input id="password-confirm" type="password" class="form-control input" name="password_confirmation" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label class="label">Confirmar contraseña</label>
+                                <label class="labelMaterial">Confirmar contraseña</label>
                             </div>
                         </div>
 

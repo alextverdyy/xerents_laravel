@@ -127,7 +127,7 @@ class EventsManagerController extends Controller
             'timeout' => 20.0,
         ]);
         // TODO: Add location
-        $response = $client->request( 'GET','events/search?app_key=rCR5P3ZZGndrHvpR&keywords='.$term);
+        $response = $client->request( 'GET','events/search?page_size=9&app_key=rCR5P3ZZGndrHvpR&keywords='.$term);
 
         $xml = new \SimpleXMLElement($response->getBody()->getContents());
 

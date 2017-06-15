@@ -45,14 +45,14 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li><div class="filter col-md-12 col-md-push-6 col-md-offset-12"><form action="buscar" method="GET"><input type="text" name="term" id="term" required style="border: 1px solid #ccd0d2; border-radius: 4px; height:35px;" /><input type="submit" value="Buscar"  class="btn btn-default"/> </form></div></li>    &nbsp;
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><div class="filter"><form action="getdata" method="GET"><input type="text" name="term" id="term" /><input type="submit" value="Buscar" /> </form></div></li>
+
                             {{ csrf_field() }}
                             <li><a href="{{ route('login') }}">Conectarse</a></li>
                             <li><a href="{{ route('register') }}">Registrarse</a></li>
@@ -73,6 +73,11 @@
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
+                                    </li>
+                                    <li>
+                                        <a href="/favoritos">
+                                            Favoritos
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
