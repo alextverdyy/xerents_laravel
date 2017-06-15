@@ -52,7 +52,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="/filtrar">Filtrar</a></li>
+                            <li><div class="filter"><form action="getdata" method="GET"><input type="text" name="term" id="term" /><input type="submit" value="Buscar" /> </form></div></li>
+                            {{ csrf_field() }}
                             <li><a href="{{ route('login') }}">Conectarse</a></li>
                             <li><a href="{{ route('register') }}">Registrarse</a></li>
                         @else
@@ -131,7 +132,7 @@
 <footer>
 
     <div class="footer">
-        Test Phrase
+       <h6 class="footerText">Realizado por: Joaquín Raposo, Manuel Pérez y Oleg Tverdyy</h6>
     </div>
 
 </footer>

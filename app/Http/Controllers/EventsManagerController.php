@@ -133,9 +133,9 @@ class EventsManagerController extends Controller
 
         $json = json_encode($xml,JSON_FORCE_OBJECT);
         $elements = json_decode($json, true);
-
+        //return print_r($elements);
         if ($elements["total_items"] == 0){
-            return "No se encotro nadfa";
+            return view("notfound");
         }
         return view("index")->with("events", $elements["events"]["event"]);
     }
